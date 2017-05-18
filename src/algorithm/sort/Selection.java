@@ -6,6 +6,13 @@ package algorithm.sort;
  */
 public class Selection {
 
+    /**
+     * 假设数组[10,11,23,5,3,8]
+     * 一开始min = 0；
+     * 当j=3时，min = 3;
+     * 当j =4时，min = 4;
+     * 跳出循环，交换最小值。
+     */
     public static void sort(Comparable[] comparables) {
 
         int N = comparables.length;//数据长度
@@ -18,9 +25,9 @@ public class Selection {
                 if (less(comparables[j], comparables[min])) {
                     min = j;
                 }
-                //交换 传入两个索引，交换两个值
-                exchange(comparables, i, min);
             }
+            //交换 传入两个索引，交换两个值
+            exchange(comparables, i, min);
         }
     }
 
