@@ -17,6 +17,7 @@ public class Example {
 
     //比较
     public static boolean less(Comparable a, Comparable b) {
+        //a < b
         return a.compareTo(b) < 0;
     }
 
@@ -31,8 +32,19 @@ public class Example {
 
         int length = comparables.length;
         for (int i = 0; i < length; i++) {
-
+            System.out.println(comparables[i]);
         }
+    }
+
+    //是否已排序
+    private static boolean isSorted(Comparable[] comparables) {
+        int length = comparables.length;
+        for (int i = 1; i < length; i++) {
+            if (less(comparables[i], comparables[i - 1])) {
+                return false;
+            }
+        }
+        return true;
 
     }
 }
