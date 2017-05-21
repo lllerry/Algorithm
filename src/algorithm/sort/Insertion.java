@@ -3,6 +3,8 @@ package algorithm.sort;
 /**
  * Created by lerry on 18/05/2017.
  * 插入排序
+ *
+ * 插入排序对于部分部分有序的数组十分高效，也很适合小规模数组。
  */
 public class Insertion {
 
